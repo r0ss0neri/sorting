@@ -4,8 +4,12 @@ function sort(arr) {
     for (let i = 1; i < arr.length; i++) {
         comparableValue = arr[i];
 
-        var x = compare(i - 1);
-        arr[x] = comparableValue;
+        var index = compare(i - 1);
+
+        if (index !== i) {
+            arr[index] = comparableValue;
+        }
+
     }
 
     function compare(index) {
@@ -30,4 +34,4 @@ function sort(arr) {
     return arr;
 }
 
-console.log(sort([3, 0, 5, 10, 0, 3, 5, 2, 1]));
+console.log(sort([3, 0, 2, 1]));
