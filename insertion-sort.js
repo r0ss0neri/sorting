@@ -9,7 +9,6 @@ function sort(arr) {
         if (index !== i) {
             arr[index] = comparableValue;
         }
-
     }
 
     function compare(index) {
